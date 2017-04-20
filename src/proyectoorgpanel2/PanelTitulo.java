@@ -26,7 +26,7 @@ public class PanelTitulo extends JPanel{
         imagen.setIcon(icon);
         imagen.setBounds(1, 1, 200, 100);
         add(imagen);
-        titulo = new JLabel("VIDEOTIENDA                   Duvan Poveda-David Jimenez");
+        titulo = new JLabel("DISCOTIENDA                   Duvan Poveda-David Jimenez");
         titulo.setFont(new Font("Tahoma",1,18));
         titulo.setBounds(400, 0, 500, 100);
         add(titulo);

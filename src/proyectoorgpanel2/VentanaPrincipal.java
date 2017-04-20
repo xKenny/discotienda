@@ -26,7 +26,7 @@ public class VentanaPrincipal extends JFrame{
         
     public VentanaPrincipal() {
         setSize(900, 600);
-        setTitle("PROGRAMACION II");
+        setTitle("Discotienda");
         setLocation(200, 100);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -66,5 +66,11 @@ public class VentanaPrincipal extends JFrame{
     public Panel3 getPanel3() {
         return panel3;
     }
+
+    public PanelCancion getPanelCancion() {
+        return panelCancion;
+    }
+    
+   
 
 }

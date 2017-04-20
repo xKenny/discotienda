@@ -35,37 +35,39 @@ public class Panel1 extends JPanel implements ActionListener{
             
     public Panel1(VentanaPrincipal ventana) {
          this.ventana = ventana;
+         setBackground(Color.YELLOW);
          setBorder(BorderFactory.createTitledBorder("Artista"));
          setLayout(null);
          listaArtista = new ArrayList<Artista>();
+          
          
          LNombre = new JLabel ("Nombre:*");
          LGenero = new JLabel ("Genero:*");
          LNacionalidad = new JLabel ("Nacionalidad:*");
          
-         LNombre.setBounds(30, 30, 100, 20);
+         LNombre.setBounds(30, 50, 100, 20);
          add(LNombre);
          
-         LGenero.setBounds(30, 60, 100, 20);
+         LGenero.setBounds(30, 80, 100, 20);
          add(LGenero);
 
-         LNacionalidad.setBounds(30, 90, 100, 20);
+         LNacionalidad.setBounds(30, 110, 100, 20);
          add(LNacionalidad);
          
          JTNombre = new JTextField();
-         JTNombre.setBounds(140, 30, 150, 20);
+         JTNombre.setBounds(140, 50, 150, 20);
          add(JTNombre);
          
          CMGenero = new JComboBox(Genero.values());
-         CMGenero.setBounds(140, 60, 150, 20);
+         CMGenero.setBounds(140, 80, 150, 20);
          add(CMGenero);
 
          CBNacionalidad = new JComboBox(Nacionalidad.values());
-         CBNacionalidad.setBounds(140, 90, 150, 20);
+         CBNacionalidad.setBounds(140, 110, 150, 20);
          add(CBNacionalidad);
          
-         BGuardar = new JButton("Guardar");
-         BGuardar.setBounds(140, 120, 150, 20);
+         BGuardar = new JButton("Crear Artista");
+         BGuardar.setBounds(80, 170, 150, 20);
          BGuardar.addActionListener(this);
          add(BGuardar);
          
@@ -80,6 +82,7 @@ public class Panel1 extends JPanel implements ActionListener{
             JOptionPane.showMessageDialog(this, "Artista creado.", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
             vaciarDatos();
             this.ventana.getPanel2().actualizarArtista(artista.getNombre());
+            this.ventana.getPanelCancion().actualizarArti(artista.getNombre());
             
        }
     }
